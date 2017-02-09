@@ -8,9 +8,8 @@
 
 ## 关于我
 > 90后码农一枚，专注于Android开发，现居深圳，欢迎关注  
-  博客：[aizuzi的简书](http://www.jianshu.com/u/be45a89999b5) 微信：[li0930]()  
-* Blog: [http://www.eicky.com](http://www.eicky.com)
-* Mail: eicky@eicky.com
+* 博客: [aizuzi的简书](http://www.jianshu.com/u/be45a89999b5)
+* 微信: [li0930]()  
 
 ##感谢
 [CymChad/BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
