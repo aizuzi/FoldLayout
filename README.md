@@ -1,13 +1,10 @@
-# FoldLayout     [![](https://jitpack.io/v/eicky/HeaderRecyclerViewAdapter.svg)](https://jitpack.io/#eicky/HeaderRecyclerViewAdapter)
+# FoldLayout     
 
 为RecyclerView添加头部视图
-## Use
 
+## 效果图
 
-##Code
-
-
-##Demo
+## 使用方法
 
 ## 关于我
 > 90后码农一枚，专注于Android开发，现居深圳，欢迎关注  
