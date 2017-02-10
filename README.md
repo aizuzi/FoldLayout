@@ -9,7 +9,7 @@
 
 目前只作为显示Demo使用，如果需要使用可以使用
 
-    ```code
+    ```
     git clone https://github.com/aizuzi/FoldLayout.git
     ```
 clone到本地后使用
