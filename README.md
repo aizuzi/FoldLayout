@@ -10,7 +10,7 @@
 目前只作为显示Demo使用，如果需要使用可以clone到本地后使用
 
 ```code
-[git clone https://github.com/aizuzi/FoldLayout.git]
+    git clone https://github.com/aizuzi/FoldLayout.git
 ```
 ## 关于我
 > 90后码农一枚，专注于Android开发，现居深圳，欢迎关注  
