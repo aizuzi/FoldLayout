@@ -1,10 +1,18 @@
 # FoldLayout     
 
-为RecyclerView添加头部视图
+可折叠的控件，类似CoordinatorLayout的效果，但使用比CoordinatorLayout要简单
 
 ## 效果图
+<img src="https://github.com/aizuzi/FoldLayout/blob/master/screenshot/ezgif.com-video-to-gif.gif" height="640" width="360" >
 
 ## 使用方法
+
+目前只作为显示Demo使用，如果需要使用可以使用
+
+    ```code
+    git clone https://github.com/aizuzi/FoldLayout.git
+    ```
+clone到本地后使用
 
 ## 关于我
 > 90后码农一枚，专注于Android开发，现居深圳，欢迎关注  
