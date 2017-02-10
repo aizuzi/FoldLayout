@@ -7,10 +7,14 @@
 
 ## 使用方法
 
-目前只作为显示Demo使用，如果需要使用可以使用
-```[git clone https://github.com/aizuzi/FoldLayout.git]
-```    
-clone到本地后使用
+目前只作为显示Demo使用，如果需要使用可以使用 [git clone https://github.com/aizuzi/FoldLayout.git]() clone到本地后使用
+
+```get
+    dependencies {
+    	        compile 'com.github.eicky:HeaderRecyclerViewAdapter:1.0'
+    	}
+
+```
 
 ## 关于我
 > 90后码农一枚，专注于Android开发，现居深圳，欢迎关注  
