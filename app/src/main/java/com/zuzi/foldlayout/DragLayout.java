@@ -27,7 +27,7 @@ public class DragLayout extends ViewGroup {
   private int topViewHeight;
 
   //HeadView的最高高度
-  public int MIN_HEIGHT = dp2px(getContext(), 80);
+  public int MIN_HEIGHT = UnitUtil.dp2px(getContext(), 80);
 
   public DragLayout(Activity context) {
     super(context);
@@ -48,11 +48,9 @@ public class DragLayout extends ViewGroup {
     mRecyclerView = new CustomRecyclerView(getContext());
     mRecyclerView.setMinHeight(MIN_HEIGHT);
 
-    addView(mHeadView);
+    addView(mHeadView,new LayoutParams(LayoutParams.MATCH_PARENT, UnitUtil.dp2px(getContext(),300)));
 
-    LayoutParams recyclerLp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-
-    addView(mRecyclerView, recyclerLp);
+    addView(mRecyclerView, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
   }
 
@@ -232,11 +230,6 @@ public class DragLayout extends ViewGroup {
 
   public RecyclerView getRecyclerView() {
     return mRecyclerView;
-  }
-
-  public int dp2px(Context context, float dp) {
-    final float scale = context.getResources().getDisplayMetrics().density;
-    return (int) (dp * scale + 0.5f);
   }
 
 }

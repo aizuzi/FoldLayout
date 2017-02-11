@@ -8,32 +8,21 @@ import android.view.View;
 import android.view.ViewConfiguration;
 
 public class CustomRecyclerView extends RecyclerView {
-    private static final int TOUCH_IDLE = 0;
-    private static final int TOUCH_DRAG_LAYOUT = 2;
+  private static final int TOUCH_IDLE = 0;
+  private static final int TOUCH_DRAG_LAYOUT = 1;
 
-    private int scrollMode;
-    private float downY;
-
-    private int minHeight;
-
+  private int scrollMode;
+  private float downY;
+  private int minHeight;
   boolean isAtTop;
 
-    public CustomRecyclerView(Context arg0) {
-        this(arg0, null);
-    }
-
-    public CustomRecyclerView(Context arg0, AttributeSet arg1) {
-        this(arg0, arg1, 0);
-    }
-
-    public CustomRecyclerView(Context arg0, AttributeSet arg1, int arg2) {
-        super(arg0, arg1, arg2);
-    }
-
+  public CustomRecyclerView(Context arg0) {
+    super(arg0);
+  }
 
   @Override
   public boolean dispatchTouchEvent(MotionEvent ev) {
-    if(getTop()>minHeight){
+    if (getTop() > minHeight) {
       getParent().requestDisallowInterceptTouchEvent(false);
       return false;
     }
@@ -45,7 +34,7 @@ public class CustomRecyclerView extends RecyclerView {
     } else if (ev.getAction() == MotionEvent.ACTION_MOVE) {
       if (scrollMode == TOUCH_IDLE) {
         float yDistance = Math.abs(downY - ev.getRawY());
-         if (yDistance > 0) {
+        if (yDistance > 0) {
           scrollMode = TOUCH_DRAG_LAYOUT;
           if (downY < ev.getRawY() && isAtTop) {
             getParent().requestDisallowInterceptTouchEvent(false);
@@ -58,17 +47,19 @@ public class CustomRecyclerView extends RecyclerView {
     return super.dispatchTouchEvent(ev);
   }
 
+  //传入头部布局的最小高度，用于分发触摸事件
   public void setMinHeight(int minHeight) {
     this.minHeight = minHeight;
   }
 
+  //判断RecyclerView是否滚动到顶部
   protected boolean isReadyForPullStart() {
     if (getChildCount() <= 0)
       return false;
     View view = getChildAt(0);
     int firstVisiblePosition = getChildAdapterPosition(view);
     if (firstVisiblePosition == 0) {
-      return view.getTop()  >= getPaddingTop();
+      return view.getTop() >= getPaddingTop();
     } else {
       return false;
     }
